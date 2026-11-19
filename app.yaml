@@ -1,6 +1,4 @@
-
 runtime: php83
-
 handlers:
   # Mostrar imágenes como archivos estáticos
   - url: /(.+\.(gif|png|jpg))$
