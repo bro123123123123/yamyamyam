@@ -1,10 +1,10 @@
 runtime: php83
-entrypoint: serve API/index.php
+entrypoint: serve api/index.php
 
 handlers:
 - url: /(.+\.(gif|png|jpg|jpeg|css|js))$
-  static_files: API/\1
-  upload: API/.+\.(gif|png|jpg|jpeg|css|js)$
+  static_files: api/\1
+  upload: api/.+\.(gif|png|jpg|jpeg|css|js)$
 
 - url: /.*
   script: auto
