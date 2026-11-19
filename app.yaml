@@ -1,13 +1,10 @@
-
 runtime: php83
+entrypoint: serve API/index.php
 
 handlers:
-  # Mostrar imágenes como archivos estáticos
-  - url: /(.+\.(gif|png|jpg))$
-    static_files: \1
-    upload: .+\.(gif|png|jpg)$
+- url: /(.+\.(gif|png|jpg|jpeg|css|js))$
+  static_files: API/\1
+  upload: API/.+\.(gif|png|jpg|jpeg|css|js)$
 
-  # Enviar las demás solicitudes a la aplicación PHP
-  - url: /.*
-    script: auto
-
+- url: /.*
+  script: auto
