@@ -1,1 +1,13 @@
 
+runtime: php83
+
+handlers:
+  # Mostrar imágenes como archivos estáticos
+  - url: /(.+\.(gif|png|jpg))$
+    static_files: \1
+    upload: .+\.(gif|png|jpg)$
+
+  # Enviar las demás solicitudes a la aplicación PHP
+  - url: /.*
+    script: auto
+
