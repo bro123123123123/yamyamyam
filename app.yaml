@@ -1,5 +1,5 @@
 runtime: php83
-entrypoint: serve api/index.php
+entrypoint: serve api/index.html
 
 handlers:
 - url: /(.+\.(gif|png|jpg|jpeg|css|js))$
